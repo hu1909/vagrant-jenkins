@@ -1,0 +1,18 @@
+node:  
+  image: generic/ubuntu2004
+  count: 2 # Number of worker node
+shared_folders:
+  master:
+  - host_path: C:\Users\QuocHungNGUYEN\practice-lab\vagrant-jenkin\master-node
+    vm_path: /vagrant-data/master-node
+  
+  worker: 
+  - host_path: C:\Users\QuocHungNGUYEN\practice-lab\vagrant-jenkin\worker-node
+    vm_path: /vagrant-data/
+node-resources:
+  master-node:
+    cpus: 8
+    memory: 4096
+  worker-node:
+    cpus: 4
+    memory: 2048
